@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital vCard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2447 0%, #1a3a6e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b82f6;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+            animation: pulse 2s infinite ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 25px rgba(59, 130, 246, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
+            100% { transform: scale(1); box-shadow: 0 0 25px rgba(59, 130, 246, 0.5); }
+        }
+        
+        .card {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .contact-item {
+            animation: slideIn 0.6s ease-out;
+            transform-origin: left;
+        }
+        
+        .contact-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .save-btn {
+            animation: bounce 1s ease-in-out 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .icon {
+            animation: rotate 1s ease-in-out;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(-45deg); opacity: 0; }
+            to { transform: rotate(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card bg-gradient-to-br from-blue-900 to-blue-800 rounded-3xl p-8 mx-4 my-8 shadow-2xl max-w-sm w-full">
+        <div class="flex flex-col items-center">
+            <!-- Profile Image -->
+            <div class="mb-6 mt-2 relative">
+               
+                        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="20s" repeatCount="indefinite" />
+                    </circle>
+                </svg>
+                <img src="Gen Arceo.png" alt="Profile" class="profile-img">
+            </div>
+            
+            <!-- Name -->
+            <h1 class="text-3xl font-bold text-white mb-2 text-center">	RANDY Y ARCEO </h1>
+            <p class="text-blue-300 mb-6 text-center">Police Brigadier General</p>
+            
+            <!-- Contact Info -->
+            <div class="w-full space-y-4 mb-8">
+                <!-- Phone -->
+                <div class="contact-item bg-blue-800/50 p-4 rounded-xl flex items-center backdrop-blur-sm border border-blue-700/50">
+                    <div class="icon bg-blue-600 p-3 rounded-lg mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-blue-300">Mobile</p>
+                        <p class="text-white font-medium">0917 574 1332</p>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-item bg-blue-800/50 p-4 rounded-xl flex items-center backdrop-blur-sm border border-blue-700/50">
+                    <div class="icon bg-blue-600 p-3 rounded-lg mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-blue-300">Email</p>
+                        <p class="text-white font-medium">spdrandyyarceo@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Save Button -->
+            <a href="0917 574 1332" class="save-btn bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-4 px-8 rounded-xl w-full flex items-center justify-center shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                </svg>
+                Save to Contacts
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // This will trigger the phone's contact saving functionality
+        document.querySelector('.save-btn').addEventListener('click', function() {
+            // The tel: protocol will open the phone dialer with the number
+            // From there, users can save the contact to their phone
+            // This is handled by the href attribute on the anchor tag
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'954bb000e55e8d0e',t:'MTc1MDc2MjQ3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
