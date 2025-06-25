@@ -319,10 +319,7 @@ END:VCARD`;
                     const directLink = document.createElement('a');
                     directLink.click();
                     
-                    // Show instructions for saving contact after dialing
-                    const toast = document.getElementById('successToast');
-                    toast.innerHTML = '<div class="flex items-center"><span>After call ends, tap "Add to Contacts"</span></div>';
-                    toast.classList.add('show');
+    
                     
                     setTimeout(() => {
                         toast.classList.remove('show');
